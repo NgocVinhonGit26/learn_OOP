@@ -8,21 +8,30 @@ package com.mycompany.storegui;
 public class Item {
     private String name;
     private long id;
-    private double cost;
+    private Float cost;
     private int quantity;
     private String imageAddress;
 
-    public Item(String name, double cost, long id, int quantity) {
+    public Item(String name, float cost, long id, int quantity) {
         this.name = name;
         this.cost = cost;
         this.id = id;
         this.quantity = quantity;
     }
 
-    public Item(String name, String imageAddress, double cost) {
+    public Item(String name, String imageAddress, float cost) {
         this.name = name;
         this.cost = cost;
         this.imageAddress = imageAddress;
+    }
+
+    public Item(String name, String imageAddress) {
+        this.name = name;
+        this.imageAddress = imageAddress;
+    }
+
+    public Item() {
+
     }
 
     public int getQuantity() {
@@ -49,11 +58,11 @@ public class Item {
         this.name = name;
     }
 
-    public double getCost() {
+    public float getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
+    public void setCost(float cost) {
         this.cost = cost;
     }
 
